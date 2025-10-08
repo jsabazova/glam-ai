@@ -13,6 +13,10 @@ from pathlib import Path
 import json
 import asyncio
 import time
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 from face_analyzer import FaceAnalyzer
 from claude_client import ClaudeClient

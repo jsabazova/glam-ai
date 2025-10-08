@@ -4,7 +4,7 @@ python-multipart==0.0.6
 pillow==10.1.0
 mediapipe==0.10.8
 numpy==1.24.3
-anthropic==0.7.8
+anthropic==0.34.0
 python-dotenv==1.0.0
 pydantic==2.5.0
 opencv-python==4.8.1.78

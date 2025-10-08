@@ -26,7 +26,12 @@ class ClaudeClient:
         if not api_key:
             raise ValueError("CLAUDE_API_KEY environment variable is required")
 
-        self.client = Anthropic(api_key=api_key)
+        try:
+            self.client = Anthropic(api_key=api_key)
+        except Exception as e:
+            print(f"Failed to initialize Anthropic client: {e}")
+            # Fallback initialization without extra parameters
+            self.client = Anthropic(api_key=api_key)
 
     async def get_makeup_recommendations(self, analysis_data: Dict) -> Dict:
         """
